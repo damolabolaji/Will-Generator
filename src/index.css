@@ -203,3 +203,68 @@ small {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 800px){
+  content {
+    margin: 64px;
+  }
+
+  .menuLinks a{
+    font-size: 14px;
+  }
+
+
+  .footer{
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding: 30px 16px 32px 16px;
+    text-align: left;
+  }
+
+  .footer img{
+width: 150px;
+
+  }
+
+  .footer h6 {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+
+  /* -------contact form-------- */
+
+  .contactForm{
+    padding: 60px 32px 80px;
+    margin: auto;
+    min-width: 320px;
+  }
+
+  #my-form {
+    margin-top: 60px;
+  }
+  
+  #name {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #name div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    /* margin: 14px 0; */
+  }
+
+  #name div:not(:last-child)  {
+    padding-bottom: 34px;
+  }
+  
+  .flex-col-full {
+    margin: 24px 0;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+  }
+}

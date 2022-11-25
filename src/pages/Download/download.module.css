@@ -10,7 +10,6 @@
 
 .container {
     max-width: 124rem;
-    height: 100vh;
     background-color: beige;
     display: flex;
     place-items: center;
@@ -21,6 +20,7 @@
     display: flex;
     gap: 40px;
     padding: 40px;
+    text-align: center;
 }
 
 .hero h1 {
@@ -51,4 +51,11 @@
     width: 30%;
 }
 
-
+@media screen and (max-width: 800px){
+    .hero {
+        flex-direction: column;
+    }
+    .downloadimage{
+    width: 100%;
+}
+}
