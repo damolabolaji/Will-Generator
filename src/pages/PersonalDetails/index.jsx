@@ -135,7 +135,7 @@ const PersonalDetails = () => {
             name='message'
             className={formErrors.message ? "error" : ""}
             id='message'
-            placeholder='additional details'
+            placeholder='additional titles'
             value={formValues.message}
             onChange={handleChange}
           />

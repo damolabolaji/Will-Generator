@@ -118,7 +118,7 @@ const PersonalDetails = () => {
             name='message'
             className={formErrors.message ? "error" : ""}
             id='message'
-            placeholder='additional details'
+            placeholder='add Possession to be bequeath'
             value={formValues.message}
             onChange={handleChange}
           />
@@ -129,7 +129,7 @@ const PersonalDetails = () => {
           <button id='btn__submit'>Download Will</button>
         </Link>
         <Link to='/possessions-and-beneficiaries'>
-          <button id='btn__submit'>Add Beneficiaries</button>
+          <button id=''>Add Beneficiaries</button>
         </Link>
       </form>
     </div>

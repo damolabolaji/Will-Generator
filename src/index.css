@@ -150,6 +150,7 @@ button {
   border-radius: 8px;
   border: 1px solid #1570EF;
   background-color: #1570EF;
+  font-size: 20px;
 }
 
 #my-form button:hover {
