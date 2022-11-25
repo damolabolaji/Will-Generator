@@ -1,0 +1,44 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Rose', cursive;
+    font-size: 10px;
+    box-sizing: border-box;
+  }
+
+.container {
+    max-width: 124rem;
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    place-items: center;
+    margin-inline: auto;
+}
+
+.hero {
+    display: flex;
+    gap: 40px;
+    padding: 40px;
+}
+
+.hero h1 {
+    font-size: 46px;
+}
+.hero h2 {
+    font-size: 36px;
+}
+.hero p {
+    font-size: 20px;
+    margin-block: 30px;
+}
+
+.hero a {
+    font-size: 20px;
+    padding: 16px 32px;
+    margin-block: 40px;
+    background-color: rgb(189, 118, 43);
+    border-radius: 10px;
+}
+
+
