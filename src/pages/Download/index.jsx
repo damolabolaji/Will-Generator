@@ -1,15 +1,23 @@
-import React from "react";
-import styles from "./download.module.css";
-import image from "./assets/Last-will-and-testament.jpg";
+import React, { useRef } from "react";
+import ReactToPrint from "react-to-print";
+import Preview from "./Preview";
 
 function Download() {
+  const componentRef = useRef();
   return (
-    <div className={styles.container}>
-      <div className={`${styles.hero} ${styles.download}`}>
-        <h1>Your download will begin shortly</h1>
-        <img src={image} alt='' className={`${styles.downloadimage}`} />
+    <>
+      <Preview ref={componentRef} />
+      <div className="grid place-items-center">
+        <ReactToPrint
+          trigger={() => (
+            <button className="w-52 bg-[#1570EF] text-white text-2xl">
+              Download
+            </button>
+          )}
+          content={() => componentRef.current}
+        />
       </div>
-    </div>
+    </>
   );
 }
 
