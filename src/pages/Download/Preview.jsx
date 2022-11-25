@@ -1,35 +1,36 @@
 import React, { forwardRef } from "react";
+import { useGlobalContext } from "../../context/WillContext";
 
 const Preview = forwardRef((props, ref) => {
+  const { personalDetails, beneficiaries } = useGlobalContext();
   return (
     <main
       className="mx-8 px-12 mt-20 py-8 bg-gray-100 flex-col flex gap-y-3"
       ref={ref}
     >
       <h1 className="underline text-center text-4xl mb-3">
-        THE LAST WILL AND TESTAMENT OF ME {"Name".toUpperCase()} OF
-        {" Address".toUpperCase()}
+        THE LAST WILL AND TESTAMENT OF ME
+        {` ${personalDetails.firstName.toUpperCase()} ${personalDetails.lastName.toUpperCase()} `}
+        OF
+        {` ${personalDetails.address}`.toUpperCase()}
       </h1>
       <p className="text-xl">
         I REVOKE all former testamentary documents made by me and DECLARE this
         to be my last Will.
       </p>
       <p className="text-xl">
-        I APPOINT {"___________ "}(name and occupation of executors) of
-        {"___________ "} (address of executors) to be the executors and trustees
-        of my Will. And I DECLARE THAT the expression “MY TRUSTEES” shall where
-        the context so admits include my trustee for the time being of this my
-        Will.
+        I appoint {personalDetails.nameExecutor.toUpperCase()} (name and
+        occupation of executors) of
+        {` ${personalDetails.addressExecutor.toUpperCase()}`} (address of
+        executors) to be the executors and trustees of my Will. And I DECLARE
+        THAT the expression “MY TRUSTEES” shall where the context so admits
+        include my trustee for the time being of this my Will.
       </p>
       <div className="gap-y-3 flex flex-col">
-        {[1, 2, 3, 4, 5].map((item) => (
-          <p className="text-xl" key={item}>
-            I direct that
-            {
-              " the vacant parcel of land measuring about 100 feet by 100 feet, behind my said Igiogbe, should be shared equally between my eldest daughter, Mrs. FF and my son GH;"
-            }
-          </p>
-        ))}
+        <p className="text-xl">
+          I direct that
+          {` ${beneficiaries.message}, should be give to ${beneficiaries.relationship}, ${beneficiaries.firstName} ${beneficiaries.lastName};`}
+        </p>
       </div>
       <p className="text-xl">
         I DECLARE that if any of my child/children named in this Will dies in my
