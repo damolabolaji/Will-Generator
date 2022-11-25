@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 import styles from "./landingpage.module.css";
 import Image from "./assets/hero-image.png";
@@ -16,7 +17,7 @@ function LandingPage() {
             you do it all on your own. Will and Testament Generator, it’s quick,
             pain-free, and effective.
           </p>
-          <Link to='/'>Create your will now</Link>
+          <Link to='/personal-details'>Create your will now</Link>
         </div>
         <div>
           <img src={Image} alt='' />
